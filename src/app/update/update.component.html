@@ -1,0 +1,364 @@
+
+<!-- <form class="row g-3" [formGroup]="myForm"  *ngIf="showId.length!=0"  novalidate>
+    <div class="col-lg-1">
+      <label for="inputState" class="form-label"></label>
+      <select id="inputState" class="form-select">
+        <option selected>Mr.</option>
+        <option>Ms.</option>
+      </select>
+    </div>
+    
+    
+    <div class="col-md-4">
+  
+      <label  class="form-label">First Name</label>
+      <input type="text" class="form-control"  formControlName="firstname" [(ngModel)]="showId[0].firstname"> 
+    </div>
+    <div class="col-md-4">
+      <label  class="form-label">Last Name</label>
+      <input type="text" class="form-control"  formControlName="lastname" [(ngModel)]="showId[0].lastname">
+    </div>
+    <div class="col-md-4">
+      <label  class="form-label">Middle Name</label>
+      <input type="text" class="form-control" formControlName="middlename"[(ngModel)]="showId[0].middlename ">
+    </div> -->
+    <!-- <div class="col-md-6">
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" formControlName="birthday" [(ngModel)]="showId[0].birthday" [(ngModel)]="showId[0].birthday">
+    </div> -->
+    <!-- <div class="col-md-6">
+      <label for="birthday">Birthday:</label> -->
+      <!-- <input type="text"
+      class="form-control"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      #dp="bsDatepicker"
+      bsDatepicker 
+      (change)=" CalculateAge()"> -->
+
+      <!-- <input [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }"
+                                formControlName="birthday" [(ngModel)]="showId[0].birthday"
+                                class="form-control"  bsDatepicker  > 
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Blood group</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">height</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">weight</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address" [(ngModel)]="showId[0].address">
+    </div>
+    <div class="col-md-2">
+      <label for="inputState" class="form-label">academics</label>
+      <select id="inputState" class="form-select">
+        <option selected>hsc</option>
+        <option>ssc</option>
+       
+      </select>
+      <label for="inputAddress" class="form-label">marks</label>
+      <input type="text" class="form-control" id="inputAddress" >
+      <label for="inputAddress" class="form-label">marks outof</label>
+      <input type="text" class="form-control" id="inputAddress" >
+      <label for="inputAddress" class="form-label">percentage</label>
+      <input type="text" class="form-control" id="inputAddress" >
+  
+    </div>
+    <div class="col-md-6">
+      <label for="inputAddress2" class="form-label">Mobile Number</label>
+      <input type="text" class="form-control" id="inputAddress2" formControlName="mobile" [(ngModel)]="showId[0].mobile">
+    </div> -->
+    <!-- <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" formControlName="city" [(ngModel)]="showId[0].city">
+    </div> -->
+    <!-- <div class="col-md-6">
+      <label for="inputState" class="form-label" >State</label>
+      <select  id="inputState" class="form-select" >
+        <option selected >maharashtra</option>
+        <option>...</option>
+      </select>
+    </div> -->
+    <!-- <div class="col-md-6">
+      <label  class="form-label" >State</label>
+      <select  id="state" class="form-select"  (change)='onSelectState($event)' (focusin)=" getStates()" formControlName="state" [(ngModel)]="showId[0].state">
+        <option value=" ">Select State</option>
+<option *ngFor="let state of state" [value]= "state.id">{{state.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="City">City:</label>
+      <select class="form-control input-lg" id="city" formControlName="city" [(ngModel)]="showId[0].city"> 
+      <option *ngIf="!selectedState" value=" hhhhhhhhhhhhhhhhhhh">Select City</option>
+      <option *ngFor="let city of cities" value="{{city.name}}">{{city.name}}</option>
+      </select>
+      </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" formControlName="zip" [(ngModel)]="showId[0].zip">
+    </div>
+    <div class="col-md-6">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-primary" (click)="onUpdate()">UPDATE</button>
+    </div>
+  </form> 
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Profile Image</label>
+      <img [src]="currentimage">
+      <input type="file" id="multipleimage" class="form-control-file"  multiple (change)="selectImage($event)" >
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onUpload()" >upload</button>
+  </form> -->
+  <form class="row g-3" [(formGroup)]="myForm" *ngIf="showId.length!=0" novalidate>
+    <div class="card pb-5 ">
+      <div class="card-header">
+        PERSONAL DETAILS
+      </div>
+      <div class="card-body ">
+        <div class="row">
+          <div class="col-md-2">
+            <label for="inputState" class="form-label">Prefix</label>
+            <select id="inputState" class="form-select" formControlName="prefix">
+              <option selected>Mr.</option>
+              <option>Ms.</option>
+            </select>
+          </div>
+  
+  
+          <div class="col-md-3">
+  
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" formControlName="firstname" >
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname" >
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Middle Name</label>
+            <input type="text" class="form-control" formControlName="middlename" >
+          </div>
+  
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="birthday" class="form-label">Birthday</label>
+            <!-- <input type="text"
+          class="form-control"
+          [minDate]="minDate"
+          [maxDate]="maxDate"
+          #dp="bsDatepicker"
+          bsDatepicker 
+          (change)=" CalculateAge()"> -->
+              
+            <input [bsConfig]="{ isAnimated: true, dateInputFormat: 'YYYY-MM-DD' }"  formControlName="birthday" 
+               class="form-control"  (ngModelChange)="CalculateAge($event)"  bsDatepicker >
+          </div>
+          <div class="col-md-1">
+            <label class="form-label">Age</label>
+            <input type="text" formControlName="age"   class="form-control">
+          </div>
+          <div class="col-md-2">
+            <label  class="form-label">Blood group</label>
+            <input type="text" class="form-control" formControlName="bloodgroup" >
+          </div>
+          <div class="col-md-2">
+            <label  class="form-label">height</label>
+            <input type="text" class="form-control" formControlName="height">
+          </div>
+          <div class="col-md-2">
+            <label  class="form-label">weight</label>
+            <input type="text" class="form-control" formControlName="weight" >
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <!-- <div class="col-md-2">
+        <label for="inputState" class="form-label"></label>
+        <select id="inputState" class="form-select">
+          <option selected>Mr.</option>
+          <option>Ms.</option>
+        </select>
+      </div>
+      
+      
+      <div class="col-md-3">
+    
+        <label  class="form-label">First Name</label>
+        <input type="text" class="form-control"  formControlName="firstname"> 
+      </div>
+      <div class="col-md-3">
+        <label  class="form-label">Last Name</label>
+        <input type="text" class="form-control"  formControlName="lastname">
+      </div>
+      <div class="col-md-3">
+        <label  class="form-label">Middle Name</label>
+        <input type="text" class="form-control" formControlName="middlename">
+      </div> -->
+    <div class="card">
+      <div class="card-header">
+        ADDRESS
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+              formControlName="address" >
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">State</label>
+            <select id="state" class="form-control"  formControlName="state" (change)='onSelectState($event)' (focusin)=" getStates()"
+             >
+              <option value=" ">Select State</option>
+              <option *ngFor="let state of state" [value]="state.id">{{state.name}}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <!-- <div class="form-group"> -->
+              <label class="form-label" for="City">City</label>
+              <select class="form-control input-lg" id="city" formControlName="city" >
+                <option *ngIf="!selectedState">Select City</option>
+                <option *ngFor="let city of cities" [value]="city.name">{{city.name}}</option>
+              </select>
+  
+            <!-- </div> -->
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" formControlName="zip" >
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <!-- 
+      <div class="col-md-6">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address">
+      </div> -->
+    <div class="card">
+      <div class="card-header">
+        ADDITIONAL DETAILS
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <label for="inputState" class="form-label">academics</label>
+            <select id="inputState" class="form-select">
+              <option selected>hsc</option>
+              <option>ssc</option>
+            </select>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="inputAddress" class="form-label">marks</label>
+            <input type="text" class="form-control" id="n1" formControlName="marks" >
+          </div>
+          <div class="col-md-3">
+            <label for="inputAddress" class="form-label">marks outof</label>
+            <input type="text" class="form-control" id="n2" formControlName="total"  (focusout)="percentages()" >
+          </div>
+  
+          <div class="col-md-3">
+            <label for="inputAddress" class="form-label">percentage</label>
+            <input type="text" class="form-control"  id="n3" formControlName="percentage"    >
+            <!-- <button  (click)="percentage()" type="submit"><img src="arrow.png" alt="Arrow Icon"></button> -->
+          </div>
+          <div class="col-md-6">
+            <label for="inputAddress2" class="form-label">Mobile Number</label>
+            <input type="text" class="form-control" id="inputAddress2" formControlName="mobile" >
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="card pb-5">
+      <div class="card-header">
+        PROFILE PICTURE
+      </div>
+      <div class="card-body">
+        <div class="row">
+        <div  class="col-md-3" >
+          <label for="exampleFormControlFile1">choose image</label>
+          <input type="file" id="multipleimage" class="form-control-file"    multiple (change)="selectImage($event)" >
+        </div>
+        
+  
+      
+    
+        <div  class="col-md-2" >
+        <button  id="upload" type="submit" class="btn btn-primary" (click)="onUpload()">upload</button>
+      </div>
+      <div class="col-md-3">
+        <img [src]="currentimage">
+      </div>
+    </div>
+    </div>
+      
+    
+    </div>
+  
+    <!-- <div class="col-md-2">
+        <label for="inputState" class="form-label">academics</label>
+        <select id="inputState" class="form-select">
+          <option selected>hsc</option>
+          <option>ssc</option>
+         
+        </select>
+        <label for="inputAddress" class="form-label">marks</label>
+        <input type="text" class="form-control" id="n1" formControlName="marks">
+        <label for="inputAddress" class="form-label">marks outof</label>
+        <input type="text" class="form-control" id="n2" formControlName="total" (focusout)="percentage()">
+        <label for="inputAddress" class="form-label">percentage</label>
+        <input type="text" class="form-control" id="n3" [(ngModel)]='abc' formControlName="percentage"  > -->
+    <!-- <button  (click)="percentage()" type="submit"><img src="arrow.png" alt="Arrow Icon"></button> -->
+    <!-- </div> -->
+    <!-- <div class="col-md-6">
+        <label for="inputAddress2" class="form-label">Mobile Number</label>
+        <input type="text" class="form-control" id="inputAddress2" formControlName="mobile" >
+      </div> -->
+  
+    <!-- <div class="col-md-6">
+        <label  class="form-label" >State</label>
+        <select  id="state" class="form-select"  (change)='onSelectState($event)' (focusin)=" getStates()" formControlName="state">)
+          <option value=" ">Select State</option>
+  <option *ngFor="let state of state" [value]= "state.id">{{state.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="City">City:</label>
+        <select class="form-control input-lg" id="city" formControlName="city">
+        <option *ngIf="!selectedState" value=" hhhhhhhhhhhhhhhhhhh">Select City</option>
+        <option *ngFor="let city of cities" value="{{city.name}}">{{city.name}}</option>
+        </select>
+        </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip" formControlName="zip">
+      </div> -->
+  
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-primary" (click)="onUpdate()">UPDATE</button>
+    </div>
+  </form>

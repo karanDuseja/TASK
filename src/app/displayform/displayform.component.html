@@ -1,0 +1,54 @@
+
+<div class="d-flex flex-row-reverse">
+  <button class="btn btn-info" (click)="adr()"> ADD ENTRY</button>
+</div>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        
+        <th scope="col">firstname</th>
+        <th scope="col">lastname</th>
+        <th scope="col">middlename</th>
+        <th scope="col">city</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">address</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">image</th>
+        <th scope="col">action</th>
+        
+        
+    
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of formData | paginate: {itemsPerPage: 3, currentPage: p}">
+        <th>{{list.firstname}}</th>
+        <td >{{list.lastname}}</td>
+        <td>{{list.middlename}}</td>
+        <td>{{list.city}}</td>
+        <td>{{list.birthday | date: 'dd-MM-yyyy'}}</td>
+        <td>{{list.address}}</td>
+        <td>{{list.mobile}}</td>
+        <td> <img src="{{list.url}}"></td>
+        
+        
+        <td><button class="btn btn-success" (click)=" formUpdate(list._id)"  >edit</button><span class="px-2"></span><button class="btn btn-danger" (click)="formDelete(list._id)">delete</button></td>
+       
+      </tr>
+     
+    </tbody>
+   
+  </table>
+  <div class=" offset-3 col-md-5">
+  <pagination-controls (pageChange)="p= $event"></pagination-controls>
+
+    <!-- <h1>{{list.originalName}}</h1>
+    <h1>{{list.name}}</h1> -->
+    
+   <img *ngFor="let listg of image" src="{{listg.url}}"  >
+
+  </div>
+ 
+
+  
+  
